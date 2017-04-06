@@ -50,15 +50,13 @@
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ObjcBindingNativeLibrary Include="..\..\externals\libSDWebImage.a">
-      <Link>libSDWebImage.a</Link>
-    </ObjcBindingNativeLibrary>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="libSDWebImage.linkwith.cs">
       <DependentUpon>libSDWebImage.a</DependentUpon>
     </Compile>
     <Compile Include="Additions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="libSDWebImage.a" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
 </Project>
