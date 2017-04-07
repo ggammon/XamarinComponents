@@ -97,17 +97,9 @@ namespace SDWebImage
 		[Export("imageFromCacheForKey:")]
 		UIImage ImageFromCache(string key);
 
-		// -(void)removeImageForKey:(NSString *)key;
-		[Export("removeImageForKey:")]
-		void RemoveImage(string key);
-
 		// -(void)removeImageForKey:(NSString *)key withCompletion:(SDWebImageNoParamsBlock)completion;
 		[Export("removeImageForKey:withCompletion:")]
 		void RemoveImage(string key, SDWebImageNoParamsHandler completion);
-
-		// -(void)removeImageForKey:(NSString *)key fromDisk:(BOOL)fromDisk;
-		[Export("removeImageForKey:fromDisk:")]
-		void RemoveImage(string key, bool fromDisk);
 
 		// -(void)removeImageForKey:(NSString *)key fromDisk:(BOOL)fromDisk withCompletion:(SDWebImageNoParamsBlock)completion;
 		[Export("removeImageForKey:fromDisk:withCompletion:")]
